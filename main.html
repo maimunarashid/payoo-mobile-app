@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisyUI CDN-->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- TailwindCSS CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <!-- link with css file -->
+      <link rel="stylesheet" href="styles/style.css">
+      <!-- font awesome cdn -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="sm:outfit-font bg-[#F4F5F7]  max-w-lg mx-auto">
+    <!-- navbar -->
+
+<body class="sm:outfit-font bg-[#F4F5F7] max-w-lg mx-auto mb-4">
+    <!-- same as other section also, start from here-->
+    <div class=" rounded-2xl bg-white">
+        <!-- navbar -->
+
+    <div class="min-h-[50px] flex justify-between items-center max-w-lg mx-auto border-b-1 border-gray-300 p-3">
+        <div class="flex items-center ml-5">
+            <img class="h-[50px]" src="assets/Group.png">
+            <div class="ml-3">
+
+                <h2 class="font-bold">$<span id="available-balance">45000</span></h2>
+
+                <p class="text-gray-500">Available Balance</p>
+            </div>
+        </div>
+
+        <div>
+            <button id="log-out-btn" class="btn mr-5 text-gray-500"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button>
+        </div>
+    </div>
+    <!-- Welcome to payoooo -->
+    <div class="m-[24px]">
+        <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
+        <p class="mt-2 text-gray-500">Enjoy easy and convenient financial services with us. Cashout Charge is low..</p>
+    </div>
+    <!-- cards -->
+     <div class="h-[200px] grid grid-cols-3 m-[24px]">
+
+        <div id="add-money-btn" class="bg-white w-30 h-20 rounded-2xl flex flex-col justify-center items-center border-2 border-gray-100"><img src="assets/wallet1.png">Add Money</div>
+
+        <div id="cash-out-btn" class="bg-white w-30 h-20 rounded-2xl flex flex-col justify-center items-center border-2 border-gray-100"><img src="assets/send1.png">Cash Out</div>
+
+        <div class="bg-white w-30 h-20 rounded-2xl flex flex-col justify-center items-center border-2 border-gray-100"><img src="assets/money1.png">Transfer Money</div>
+
+        <div class="bg-white w-30 h-20 rounded-2xl flex flex-col justify-center items-center border-2 border-gray-100"><img src="assets/bonus1.png">Get Bonus</div>
+
+        <div class="bg-white w-30 h-20 rounded-2xl flex flex-col justify-center items-center border-2 border-gray-100"><img src="assets/purse1.png">Pay Bill</div>
+
+        <div class="bg-white w-30 h-20 rounded-2xl flex flex-col justify-center items-center border-2 border-gray-100"><img src="assets/transaction1.png">Transactions</div>
+
+     </div>
+    </div>
+    <!-- same as other section also, end here-->
+     <!-- form -->
+    <!-- add money form (div-div-form) uporer div ta first div then vitore arekta div and form-->
+<div>
+    <div id="add-money-parent">
+                 <h1 class="text-[15px] p-4 font-extrabold">Add Money</h1>
+      <form class="bg-white m-4 mt-0 rounded-2xl">
+        <!-- add money select bank- form part start -->
+        <label class="ml-5 font-bold">Select A Bank</label> <br>
+            <select id="bank" class="select select-primary rounded-3xl ml-3 m-[5px] border-gray-200 bg-gray-100 text-gray-400">
+            <option disabled selected class=" text-gray-400">Select Bank</option>
+            <option value="bank" placeholder="Select Bank">Islami Bank</option>
+            <option value="bank" placeholder="Select Bank">Sonali Bank</option>
+            <option value="bank">Grameen Bank</option>
+            </select>
+<br> <br>
+            <!-- add money-bank accoutnumber form part start -->
+        <label class="ml-5 font-bold">Bank Account Number</label> <br>
+            <input id="account-number" type="password" placeholder="Enter 11 digit account number" class="w-80 ml-3 rounded-3xl h-10 p-3 border-gray-300 text-gray-400 bg-neutral-100">
+            <br><br>
+            <!-- add money-bank amount add form part start -->
+        <label class="ml-5 font-bold">Amount to Add</label> <br>
+            <input id="add-amount" type="password" placeholder="Add Amount to withdraw" class="w-80 ml-3 rounded-3xl h-10 p-3 border-gray-300 text-gray-400 bg-neutral-100">
+            <br><br>
+
+            <!-- add money-bank pin number form part start -->
+        <label class="ml-5 font-bold">Pin Number</label> <br>
+            <input id="add-pin" type="password" placeholder="Enter 4 digit pin number" class=" ml-3 rounded-3xl h-10 p-3 border-gray-300 text-gray-400 bg-neutral-100 w-80">
+            <br><br>
+
+            <!-- button -->
+             <button id="add-money-btn" class="bg-blue-500 text-white w-80 h-10 rounded-3xl ml-3 mb-4">Add Money</button>
+      </form>
+             </div>
+    <!-- cash Out form start-->
+           <div id="cash-out-parent" style="display: none;">
+            <h1 class="text-[15px] p-4 font-extrabold">Cash Out</h1>
+      <form class="bg-white m-4 mt-0 rounded-2xl">
+        <!-- first option Agent Number enter-->
+        <label class="ml-5 font-bold">Agent Number</label> <br>
+            <input id="agent-number" type="password" placeholder="Enter 11 digit agent number" class="w-80 ml-3 rounded-3xl h-10 p-3 border-gray-300 text-gray-400 bg-neutral-100">
+            <br><br>
+
+            <!-- second option enter amount to withdraw-->
+        <label class="ml-5 font-bold">Amount</label> <br>
+            <input id="withdraw-amount" type="password" placeholder="Enter Amount to withdraw" class="w-80 ml-3 rounded-3xl h-10 p-3 border-gray-300 text-gray-400 bg-neutral-100">
+            <br><br>
+
+            <!-- 3rd option pin number -->
+        <label class="ml-5 font-bold">Pin Number</label> <br>
+            <input id="add-pin" type="password" placeholder="Enter 4 digit pin number" class=" ml-3 rounded-3xl h-10 p-3 border-gray-300 text-gray-400 bg-neutral-100 w-80">
+            <br><br>
+
+       
+            <!--4th part button -->
+             <button id="withdraw-btn" class="bg-blue-500 text-white w-80 h-10 rounded-3xl ml-3 mb-4">Withdraw Money</button>
+      </form>
+           </div>
+</div>
+<!-- toggling feature -->
+<script>
+document.getElementById("add-money-btn").addEventListener('click', function(){
+document.getElementById("cash-out-parent").style.display="none";
+document.getElementById("add-money-parent").style.display="block";
+})
+document.getElementById("cash-out-btn").addEventListener('click', function(){
+document.getElementById("add-money-parent").style.display="none"; 
+document.getElementById("cash-out-parent").style.display="block";   
+})
+</script>
+      <script src="main.js"></script>
+</body>
+</html>
